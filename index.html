@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 10px;  /*here we can give any value in the perspective but it should be on*/
+}
+
+.container{
+    position: relative;
+    display: flex;/*To Put the Adventure Text in the Centre*/
+    justify-content: center;/*To Put the Adventure Text in the Centre*/
+    align-items: center;/*To Put the Adventure Text in the Centre*/
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.backgr,.foreg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/*Now we have to place the background image of mountain far from our eyesight */
+.backgr{
+    transform: translateZ(-40px) scale(5);
+}
+
+.foreg{
+    transform: translateZ(-20px) scale(3);
+}
+
+h1{
+    position: absolute;
+    top: 5rem;
+    left: 10%;  
+    font-size: 10rem;
+    color: aliceblue;
+    text-shadow: 10px 6px 10px rgba(0,0,0,0.3);    
+}
+
+section{
+
+background-color: rgba(45, 45, 45);
+color: white;
+padding: 5rem 0;  
+
+}
+
+.secHeading{
+font-size: 5rem;
+padding: 5rem 0;
+}
+
+.texty{
+    font-size: 1.5rem;
+padding: 0 10rem;
+margin: 5rem 0;
+
+} 
+
+.desc{
+    position: absolute;
+    background-color: white;
+padding: 0.5rem 2.5rem;
+top:50%;
+left:50%;
+transform:translateX(-50%) translateX(-50%);
+color:black;
+font-size: 3.5rem; 
+font-weight: 600;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+background-attachment: fixed;
+height: 500px; 
+background-size: cover;
+background-position: center;
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+
+
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+
+
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+
+
+.bg4{
+    background-image: url(ftb.jpg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+<div class="container">
+    <h1>ADVENTURE</h1>
+    <img src="background.png" alt="Image Can't be displayed" class="backgr">
+    <img src="foreground.png" alt="Image Can't be displayed" class="foreg">
+</div>
+
+    </div>
+
+<section>
+
+<h2 class="secHeading">Adventure Time!</h2>
+<p class="texty">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia pariatur porro natus repudiandae consequatur similique velit, nostrum aliquid provident. Dolorem repellendus rem ab quasi quaerat alias blanditiis quia velit!
+<br><br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maxime, natus assumenda dolore vel magni soluta eaque nostrum sit labore perferendis optio modi corporis? Beatae iure enim saepe doloribus magnam?
+</p>
+
+
+<div class="bg bg1">
+<h2 class="desc">BIKING</h2>
+</div>
+<p class="texty">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia pariatur porro natus repudiandae consequatur similique velit, nostrum aliquid provident. Dolorem repellendus rem ab quasi quaerat alias blanditiis quia velit!
+    <br><br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maxime, natus assumenda dolore vel magni soluta eaque nostrum sit labore perferendis optio modi corporis? Beatae iure enim saepe doloribus magnam?
+    </p>
+
+
+    <div class="bg bg2">
+        <h2 class="desc">PARA GLIDING</h2>
+        </div>
+        <p class="texty">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia pariatur porro natus repudiandae consequatur similique velit, nostrum aliquid provident. Dolorem repellendus rem ab quasi quaerat alias blanditiis quia velit!
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maxime, natus assumenda dolore vel magni soluta eaque nostrum sit labore perferendis optio modi corporis? Beatae iure enim saepe doloribus magnam?
+            </p>
+
+
+ <div class="bg bg3">
+ <h2 class="desc">SURFING</h2>
+      </div>
+     <p class="texty">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia pariatur porro natus repudiandae consequatur similique velit, nostrum aliquid provident. Dolorem repellendus rem ab quasi quaerat alias blanditiis quia velit!
+        <br><br>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure maxime, natus assumenda dolore vel magni soluta eaque nostrum sit labore perferendis optio modi corporis? Beatae iure enim saepe doloribus magnam?
+        </p>
+
+            
+ <div class="bg bg4">
+    <h2 class="desc">FOOTBALL</h2>
+           </div>
+        <p class="texty">
+   Football is a popular game that pumps gushing adrenaline for excitement. It is an exciting game that unveils sudden changes during the ‘biting nails’ moment. It is a universal game that involves big and small nations ever
+   Football is a game that is played between two teams, with each group consisting of a goalkeeper and eleven key players. The game involves a lot of physical exercises that keep obe agile, fit, active, and healthy.
+                    
+  Football is a game that teaches us the importance of sportsmanship, unity, teamwork, and leadership. It is a game that relieves stress, teaches discipline, and calms and relaxes.
+  <br><br>
+  Football is a game that requires strength, loads of fitness and cleverness to be played. It is a game of 90 minutes. There are two teams. Each team can have a maximum of 11 players and a minimum of 7 players. There are two goalposts. The goalkeepers from each of the teams prevent the ball from entering the goal area. The other players try to zigzag their way ahead by kicking the ball. They try to pass the opponents to score a goal. It is a highly intense game with excitement, emotion, blood, and sweat.
+              
+</p>
+</section>
+
+
+
+
+</body>
+</html>
